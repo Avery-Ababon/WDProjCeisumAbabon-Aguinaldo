@@ -42,7 +42,7 @@ body{
 .top{
     position: fixed;
     width: 100%;
-    top: -30px;
+    top: -40px;
     filter: brightness(1.05);
 }
 
@@ -50,22 +50,48 @@ body{
 
     color: rgb(255, 255, 255);
     transform: translateY(-10px);
+    filter: drop-shadow(0px 0px 1px white) drop-shadow(1px 1px 0px #0000004d);
 
 }
 
 .about{
-    background-color: white;
     top: 50%;
-    border: solid rgb(164, 150, 143) 2px;
+    border-image: url(https://i.pinimg.com/736x/35/ce/9d/35ce9d79ea2031489443c0827b6d9812.jpg) 4 fill round;
+    border-width: 9px;
+    border-style: solid;
+    border-style: solid;
     left: 50%;
     top: 57%;
+    font-size: 25px;
     transform: translate(-50%, -50%);
     position: fixed;
     width: 80%;
+    text-align: center;
     height: 70%;
+    filter: drop-shadow(0px 0px 1px white) drop-shadow(1px 1px 0px #0000004d);
     padding: 10px;
 }
 
+.deathnote{
+    width: 70%;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+    top: 20%;
+    
+}
+h1, h2, h3, h4, h5, h6{
+    color: rgb(123, 106, 99);
+    text-decoration: underline;
+    text-align: center;
+}
+
+.misa{
+    position: fixed;
+    width: 400px;
+    bottom: 30px;
+    right: 50px;
+}
 button{
     
     background-image: linear-gradient(180deg, #ffd9ed, rgb(255, 229, 242));
@@ -82,9 +108,10 @@ button{
 }
 
 button:hover {
-    background-image: linear-gradient(180deg, #ffd9ed, rgb(255, 229, 242));
+    background-image: linear-gradient(180deg, #d9ebff, rgb(229, 252, 255));
     color: rgb(0, 0, 0);
     border: solid 5px rgb(255, 255, 255);
     transform: scale(1.1); 
+    filter: drop-shadow(0px 0px 1px white) drop-shadow(1px 1px 0px #0000004d);
 }
 
