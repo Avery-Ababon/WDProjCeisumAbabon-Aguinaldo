@@ -1,9 +1,10 @@
 body{
-    background-color: rgb(255, 244, 250);
     margin: 0px;
     font-size: 18px;
     font-family:'Comic Sans MS', cursive, sans-serif;
     color: rgb(112, 102, 98);
+    background-color: rgb(255, 246, 249);
+    z-index: 0;
 }
 
 .sidemenu{
@@ -30,6 +31,7 @@ body{
     padding-left: 50px;
     padding-right:  50px;
     filter: drop-shadow(0px 0px 1px white) drop-shadow(1px 1px 0px #0000004d);
+    z-index: 15;
 }
 
 .skibidi{
@@ -46,6 +48,8 @@ body{
     width: 100%;
     top: -40px;
     filter: brightness(1.05);
+    z-index: 99;
+
 }
 
 .skibidi:hover{
@@ -70,16 +74,52 @@ body{
     width: 80%;
     text-align: center;
     height: 70%;
-    filter: drop-shadow(0px 0px 1px white) drop-shadow(1px 1px 0px #0000004d);
+    filter: drop-shadow(1px 1px 0px #0000004d);
     padding: 10px;
 }
 
+.dnchar{
+    position: absolute;
+    text-align: center;
+    height: 150%;
+    width: 100%;
+    border-image: url(https://i.pinimg.com/1200x/52/ac/f0/52acf0d75bb1eb59ee5a749e764838b6.jpg) 1 fill round;
+    border-style: solid;
+    border-width: 1px black;
+    border-radius: 50px;
+    z-index: 1px;
+    padding-top: 95px;
+    padding-bottom: 95px;
+
+
+}
+
+.char{
+    height: 55px;
+    transition-duration: 0.2s;
+}
+
+.char:hover{
+    transform: scale(1.02); 
+    filter: drop-shadow(0px 0px 1px white) drop-shadow(3px 3px 3px #0000004d);
+}
+.thingy{
+    top: 57%;
+    left: 50%;
+    font-size: 25px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 80%;
+    text-align: center;
+    height: 80%;
+
+}
 .deathnote{
     width: 70%;
     left: 50%;
     position: relative;
     transform: translateX(-50%);
-    top: 10%;
+    top: 13%;
     font-size: 15px;
     
 }
