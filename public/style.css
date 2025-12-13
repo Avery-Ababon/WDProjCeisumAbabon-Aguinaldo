@@ -49,6 +49,7 @@ body{
     top: -75px;
     filter: brightness(1.05);
     z-index: 99;
+
 }
 
 .skibidi:hover{
@@ -76,7 +77,7 @@ body{
     font-size: 20px;
 }
 
-<<<<<<< HEAD
+
 .dnchar{
     position: absolute;
     text-align: center;
@@ -114,16 +115,13 @@ body{
 
 }
 .deathnote{
-
     width: 70%;
     left: 50%;
     position: relative;
     transform: translateX(-50%);
-
     top: 13%;
     font-size: 15px;
 
-    
 }
 h1, h2, h3, h4, h5, h6{
     color: rgb(123, 106, 99);
