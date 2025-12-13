@@ -79,24 +79,55 @@ body{
 
 
 .dnchar{
-    position: absolute;
+    position: relative;
+    display: flex;
     text-align: center;
+    gap: -20px;
     height: 150%;
     width: 100%;
-    border-image: url(https://i.pinimg.com/1200x/52/ac/f0/52acf0d75bb1eb59ee5a749e764838b6.jpg) 1 fill round;
+    border-image: url(https://i.pinimg.com/1200x/a2/18/9c/a2189c560f162651c94cdb22fe897c9b.jpg) 1 fill round;
     border-style: solid;
     border-width: 1px black;
     border-radius: 50px;
-    z-index: 1px;
+    z-index: 1;
     padding-top: 95px;
     padding-bottom: 95px;
+    box-sizing: border-box;
+    border-width: 60px;
+    margin: 0 auto;
+    align-items: flex-start;
+    justify-content: space-around;
 
+
+.textx {
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    border: 2px solid #9c8271;
+    border-radius: 12px;
+    padding: 8px 12px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 9.5s ease;
+    transition-duration: 1s;
+}
+
+.char:hover .textx {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
 
 }
 
 .char{
-    height: 55px;
+    height: 50px;
     transition-duration: 0.2s;
+    position: relative;
+    text-align: center;
 }
 
 .char:hover{
