@@ -84,9 +84,6 @@ body{
     text-align: center;
     height: 70%;
     width: 100%;
-    background-image: url(https://i.pinimg.com/736x/b6/4a/46/b64a4601e896dcdd9c6357e5593e7b81.jpg);
-    border: 1px solid #9c8271;
-    border-radius: 28px;
     z-index: 1;
     padding-top: 95px;
     padding-bottom: 95px;
@@ -94,6 +91,7 @@ body{
     align-items: flex-start;
     justify-content: space-around;
     margin-bottom: 25px;
+    margin-top: -15px;
 
 }
 
@@ -122,7 +120,7 @@ body{
 
 
 .char{
-    height: 50px;
+    height: 100%;
     transition-duration: 0.2s;
     position: relative;
     text-align: center;
@@ -148,8 +146,8 @@ body{
     left: 50%;
     position: relative;
     transform: translateX(-50%);
-    top: 13%;
-    font-size: 15px;
+    top: 5%;
+    font-size: 20px;
 
 }
 h1, h2, h3, h4, h5, h6{
