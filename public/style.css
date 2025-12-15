@@ -65,10 +65,10 @@ body{
 .about{
 
     left: 50%;
-    bottom: -500px;
+    top: 55%;
     font-size: 25px;
     transform: translate(-50%, -50%);
-    position: relative;
+    position: fixed;
     width: 80%;
     text-align: center;
     height: 70%;
@@ -110,6 +110,9 @@ body{
     pointer-events: none;
     transition: opacity 9.5s ease;
     transition-duration: 1s;
+    width: 450px;
+    overflow: auto;
+    white-space: normal;
 }
 
 .char:hover .textx {
@@ -156,7 +159,7 @@ body{
     left: 50%;
     position: relative;
     transform: translateX(-50%);
-    top: 5%;
+    top: 40px;
     font-size: 20px;
     text-align: left;
 }
