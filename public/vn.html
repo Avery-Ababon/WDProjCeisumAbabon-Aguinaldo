@@ -31,26 +31,98 @@
 
 <div id="game">
     <img id="bg" img src="https://i.pinimg.com/736x/72/bd/0e/72bd0eae3e6fbb0bd887c998d549f6c5.jpg">
-    <img id="character" src="../assets/misa_default.png">
+    <img id="character" img src="../assets/misa_default.png">
 
 <div id="tbox">
-        <p id="cname">Misa Amane</p>
-        <p id="text">Woah! It's been so long since we've seen a new student!!!</p>
+
+        <p id="cname"><span id ="name"></p>
+        <p id="text"><span id="thingy"></span></p>
         <button id="next">next <img src="https://64.media.tumblr.com/a045ca234dcbe6d924e5dcae631a6bc4/50d502a864aab31b-bf/s75x75_c1/92243eea9f5f78d7cbfb74f78f0127d65e453e6c.gif"></button></div>
         
-    <script>
-        document.getElementById("next").addEventListener("click", function() {
-            let name = prompt("What's your name????");
-            if (name) {
-                document.getElementById("blank").textContent = "Woah, hi" + name + "! :)";
+        <script>
+            let count = -1;
+            let foot = -1;
+            const speech = [
+            "I'm Misa! I'm the best student in this entire school! What's your name?", 
+            "Hi there!!! Nice to meet you!",
+            "Anyways, wanna be friends?",
+            "She doesn't wait for your response.",
+            "Really? Yay! Let's go eat lunch together later!",
+            "Oh... looks like the teacher's already here... We gotta get back to our seats!!!",
+            "Are you gonna pay attention?",
+            "In that case, I'll pay attention, too!!!!!",
+            "In that case, I won't listen either!!!",
+            "To your seats, students! Let's begin the lesson.",
+            "Today we'll be discussing the transformation of functions..."
+        ]; 
+
+            const names = [
+                "Misa Amane",
+                "Light Yagami",
+                "Ichiro Kurosaki",
+                "Orihime",
+                "Narrator",
+                "You",
+                "Teacher"
+            ]
+        
+        const btn = document.getElementById('next');
+        if(count == -1){
+            document.getElementById("name").innerHTML = names[0];
+            document.getElementById("thingy").innerHTML = "Woah, it's been so long since we've seen a new student!!!";
+            count++;
+            foot++;
+        }
+        function test(){
+            if(count == 0){
+                document.getElementById("thingy").innerHTML = speech[0];
+                count++;foot++;
             }
-        });
-        const dialogues = [
-            "Woah! It's been so long since we've seen a new student!!!!",
-            "My name’s Misa Amane! Nice to meet you!!!!! :3",
-            "Anyways, what's your name???"
-        ];
-    </script>
+            else if(count == 1){
+                document.getElementById("thingy").innerHTML = speech[count];
+            let blank = prompt("What's your name? :3");
+            count++;foot++;
+        }
+            else if(count > 1 && count < 7){
+            do{
+                document.getElementById("thingy").innerHTML = speech[count];
+                count++;foot++;
+                if( count == 4){
+                    document.getElementById("name").innerHTML = names[4];
+                }
+                else if(count == 5){
+                    document.getElementById("name").innerHTML = names[0];
+                }
+            } while(i < speech.length);
+            }
+            else if(foot == 7){
+                    let answer = prompt("Yes / No (follow how it's displayed or else it won't work)");
+                    if( answer == "No"){
+                        document.getElementById("thingy").innerHTML = speech[8];
+                        foot++;
+                        
+                    }
+                    else if(answer == "Yes"){
+                        document.getElementById("thingy").innerHTML = speech[7];
+                        foot++;
+                        foot++;
+                    }
+            }
+            else if(foot == 9){
+                document.getElementById("thingy").innerHTML = speech[9];
+                document.getElementById("name").innerHTML = names[6];
+                count++;
+            }
+            else if(foot > 9){
+                do{
+                document.getElementById("thingy").innerHTML = speech[foot];
+                count++;
+            } while(i < speech.length);
+            }
+        }
+        btn.addEventListener('click', test);
+        
+        </script>
 
 
 </body>
