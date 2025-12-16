@@ -1,6 +1,6 @@
         let index = 0;
         let blank = "";
-        const speech = [
+        const speech = [ //dialogue stuff
             "Woah, it's been so long since we've seen a new student!!! ^u^",
             "I'm Misa! I'm the best student in this entire school! What's your name?",
             "Hi there!!! Nice to meet you!",
@@ -20,13 +20,13 @@
             "To be continued....... (Or not)"
         ];
         
-        const names = [
+        const names = [ //names dispalyed
             "Misa Amane",
             "Narrator",
             "Teacher",
             "You"
         ];
-        const characters = [
+        const characters = [ //character images shown on screen
             { name: "Misa Amane", image: "../assets/misa.png" },
             { name: "Light Yagami", image: "../assets/lightdefault.png" },
             { name: "Teacher", image: "../assets/teacher.png" },
@@ -43,7 +43,7 @@
         btn.addEventListener("click", () => {
         index++;
 
-  if (index === 2) {
+  if (index === 2) { //ask name
     playerName = prompt("what's your name? :3") || "You";
     nameBox.textContent = names[0];
     textBox.textContent = speech[index];
