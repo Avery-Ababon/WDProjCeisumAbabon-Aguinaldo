@@ -16,7 +16,9 @@
 <style type="text/css">* {cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat991.cur), auto !important;}</style><a href="https://www.cursors-4u.com/cursor/2011/12/29/angel-wing-heart.html" target="_blank" title="Angel Wing Heart"><img src="https://cur.cursors-4u.net/cursor.png" border="0" alt="Angel Wing Heart" style="position:absolute; top: 0px; right: 0px;" /></a>    
 
 <body>
-
+    <div class="toppy">
+        <img src="https://64.media.tumblr.com/24621c9e0b5ff49cc9b9fe14efd278bf/fcd411b1724c1679-7c/s1280x1920/0bd87d487b8d0575c1523960639aa6c342f4adae.pnj" width="100%" height="90%">
+    </div>
     <div class="topmenu">
 
         
@@ -30,8 +32,8 @@
     </div>
 
 <div id="game">
-    <img id="bg" img src="https://i.pinimg.com/736x/72/bd/0e/72bd0eae3e6fbb0bd887c998d549f6c5.jpg">
-    <img id="character" img src="../assets/misa_default.png">
+    <img id="bg" img src="https://i.pinimg.com/1200x/78/07/7d/78077d608377b2b4273d9fa6fcd31854.jpg">
+    <img id="character">
 
 <div id="tbox">
 
@@ -40,89 +42,103 @@
         <button id="next">next <img src="https://64.media.tumblr.com/a045ca234dcbe6d924e5dcae631a6bc4/50d502a864aab31b-bf/s75x75_c1/92243eea9f5f78d7cbfb74f78f0127d65e453e6c.gif"></button></div>
         
         <script>
-            let count = -1;
-            let foot = -1;
-            const speech = [
-            "I'm Misa! I'm the best student in this entire school! What's your name?", 
+        let index = 0;
+        let blank = "";
+        const speech = [
+            "Woah, it's been so long since we've seen a new student!!! ^u^",
+            "I'm Misa! I'm the best student in this entire school! What's your name?",
             "Hi there!!! Nice to meet you!",
             "Anyways, wanna be friends?",
-            "She doesn't wait for your response.",
+            "She doesn't wait for your response and interrupts you before you can say anything.",
             "Really? Yay! Let's go eat lunch together later!",
             "Oh... looks like the teacher's already here... We gotta get back to our seats!!!",
-            "Are you gonna pay attention?",
+            "Are you gonna pay attention to the lesson? Just a warning though, it might be really boring!",
             "In that case, I'll pay attention, too!!!!!",
             "In that case, I won't listen either!!!",
             "To your seats, students! Let's begin the lesson.",
-            "Today we'll be discussing the transformation of functions..."
-        ]; 
-
-            const names = [
-                "Misa Amane",
-                "Light Yagami",
-                "Ichiro Kurosaki",
-                "Orihime",
-                "Narrator",
-                "You",
-                "Teacher"
-            ]
+            "Today, we have a new student!",
+            "Why don't you introduce yourself?",
+            "Hi, I'm a new student! I hope I can be friends with you all!!!!!! :)",
+            "Nice to meet you! Anyways, take a seat. Today, we'll be discussing transformations of functions....",
+            "From the corner of your eye, you catch someone looking at you.",
+            "To be continued....... (Or not)"
+        ];
         
-        const btn = document.getElementById('next');
-        if(count == -1){
-            document.getElementById("name").innerHTML = names[0];
-            document.getElementById("thingy").innerHTML = "Woah, it's been so long since we've seen a new student!!!";
-            count++;
-            foot++;
-        }
-        function test(){
-            if(count == 0){
-                document.getElementById("thingy").innerHTML = speech[0];
-                count++;foot++;
-            }
-            else if(count == 1){
-                document.getElementById("thingy").innerHTML = speech[count];
-            let blank = prompt("What's your name? :3");
-            count++;foot++;
-        }
-            else if(count > 1 && count < 7){
-            do{
-                document.getElementById("thingy").innerHTML = speech[count];
-                count++;foot++;
-                if( count == 4){
-                    document.getElementById("name").innerHTML = names[4];
-                }
-                else if(count == 5){
-                    document.getElementById("name").innerHTML = names[0];
-                }
-            } while(i < speech.length);
-            }
-            else if(foot == 7){
-                    let answer = prompt("Yes / No (follow how it's displayed or else it won't work)");
-                    if( answer == "No"){
-                        document.getElementById("thingy").innerHTML = speech[8];
-                        foot++;
-                        
-                    }
-                    else if(answer == "Yes"){
-                        document.getElementById("thingy").innerHTML = speech[7];
-                        foot++;
-                        foot++;
-                    }
-            }
-            else if(foot == 9){
-                document.getElementById("thingy").innerHTML = speech[9];
-                document.getElementById("name").innerHTML = names[6];
-                count++;
-            }
-            else if(foot > 9){
-                do{
-                document.getElementById("thingy").innerHTML = speech[foot];
-                count++;
-            } while(i < speech.length);
-            }
-        }
-        btn.addEventListener('click', test);
-        
-        </script>
+        const names = [
+            "Misa Amane",
+            "Narrator",
+            "Teacher",
+            "You"
+        ];
+        const characters = [
+            { name: "Misa Amane", image: "../assets/misa.png" },
+            { name: "Light Yagami", image: "../assets/lightdefault.png" },
+            { name: "Teacher", image: "../assets/teacher.png" },
+            { name: "You", image: "../assets/player.png" },
+            { name: "Narrator", image: ""}
+        ];
+        const nameBox = document.getElementById("name");
+        const textBox = document.getElementById("thingy");
+        const btn = document.getElementById("next");
+    
+        nameBox.textContent = names[0];
+        textBox.textContent = speech[0];
+        charchange("../assets/misa_default.png");
+        btn.addEventListener("click", () => {
+        index++;
 
+  if (index === 2) {
+    playerName = prompt("what's your name? :3") || "You";
+    nameBox.textContent = names[0];
+    textBox.textContent = speech[index];
+    return;
+  }
+  if (index === 4){
+    nameBox.textContent= names[1];
+  }
+  if (index === 5){
+    nameBox.textContent = names[0];
+    charchange("../assets/misa_default.png");
+  }
+  if (index === 11) {
+    nameBox.textContent = names[2];
+    charchange("../assets/teacher.png");
+  }
+  if(index === 13){
+    nameBox.textContent = names[3];
+    charchange("../assets/player.png");
+  }
+  if(index ===14){
+    nameBox.textContent = names[2];
+    charchange("../assets/teacher.png");
+  }
+  if(index === 15){
+    nameBox.textContent = names[1];
+    charchange("../assets/ichiro.png");
+  }
+  if (index === 8) {
+    charchange("../assets/misa_default.png");
+    const answer = prompt("Y / N (if your answer is Y, type down Y only, otherwise, any other answers will be considered as a NO!)");
+    nameBox.textContent = names[0];
+
+    if (answer === "Y") {
+      textBox.textContent = speech[8];
+      index = 9;
+      index++;
+    } else {
+      textBox.textContent = speech[9];
+      index = 9;
+      index++;
+    } return; 
+}if (index >= speech.length) return;
+
+  textBox.textContent = speech[index];
+});
+
+function charchange(img) {
+  document.getElementById("character").src = img;
+}
+
+    </script>
 
 </body>

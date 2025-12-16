@@ -213,10 +213,17 @@ button:hover {
 
 #character {
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
-    height: 80%;
+    height: 90%;
+}
+
+.toppy{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 9050;
 }
 
 #tbox {
@@ -249,4 +256,5 @@ button:hover {
 
 #next {
     float: right;
+    width: 20%;
 }
