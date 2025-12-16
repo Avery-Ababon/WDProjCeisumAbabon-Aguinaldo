@@ -228,7 +228,7 @@ button:hover {
 
 #tbox {
     position: absolute;
-    bottom: 0;
+    bottom: 4%;
     width: 50%;
     background: rgba(255, 226, 243, 0.9);
     padding: 10px;
@@ -255,6 +255,18 @@ button:hover {
 }
 
 #next {
-    float: right;
+    left: 0px;
     width: 20%;
+    bottom: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #ffe8f3;
+    border: 1px solid #9c8271;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    font-size: 10px;
 }
