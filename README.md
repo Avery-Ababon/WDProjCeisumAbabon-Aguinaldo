@@ -1,4 +1,18 @@
 # 02,03 Cesium ABABON, Avery and AGUINALDO, Freedom
+
+## Q3 Project Proposal Update Plan 01/09/26
+
+The HTML form will be used in a way that it will connect the user with the story. The website will ask for the user’s name and information, and it will be saved in the computer in a way that the information inputted will be used throughout the visual novel, like when a character mentions your name, making the website more immersive.
+<br>
+
+#### Three new webpages:
+1. Fanart page: ![page](/assets/01.png)
+<br> This page will contain fanart made by us for both Deathnote and Bleach.
+2. Storyline / plot: ![page](/assets/02.png)
+<br> This page will have an summarization of the storyline of the visual novel.
+3. Sprite page: ![page](/assets/03.png)
+<br> This page will have images of all the sprites and their costumes used in the visual novel.
+
 ## CompSci Project Proposal 𐔌՞ ܸ.ˬ.ܸ՞𐦯
 <br>
 
@@ -58,3 +72,4 @@ Like a typical visual novel game, the player can choose dialogue options to move
 ![page](/assets/8.png)
 ![page](/assets/9.png)
 ![page](/assets/10.png)
+
