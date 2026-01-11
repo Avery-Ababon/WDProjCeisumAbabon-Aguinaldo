@@ -2,7 +2,7 @@
 
 ## Q3 Project Proposal Update Plan 01/09/26
 
-The HTML form will be used in a way that it will connect the user with the story. The website will ask for the user’s name and information, and it will be saved in the computer in a way that the information inputted will be used throughout the visual novel, like when a character mentions your name, making the website more immersive.
+The HTML form will be used in a way that it will connect the user with the story. The website will ask for the user’s name and information, and it will be saved in the computer in a way that the information inputted will be used throughout the visual novel, like when a character mentions your name, making the website more immersive. It will also be used to save the chocies the players make throughout the visual novel, so every choice leads to specific endings.
 <br>
 
 #### Three new webpages:
