@@ -14,6 +14,12 @@ body.desktop {
    overflow: hidden;
 }
 
+.center {
+   display: block;
+   margin-right: 95%;
+   width: 85%;
+}
+
 .game-icon {
    position: absolute;
    bottom: 540px;
