@@ -7,10 +7,10 @@ The HTML form will be used in a way that it will connect the user with the story
 
 #### Three new webpages:
 1. Fanart page: ![page](/assets/01.png)
-<br> This page will contain fanart made by us for both Deathnote and Bleach.
-2. Storyline / plot: ![page](/assets/02.png)
+<br> This page will be where the player inputs their information, such as their name, age, and gender. This information will be used to make the visual novel more interesting and engaging.
+2. Storyline / plot: ![page](/assets/03.png)
 <br> This page will have an summarization of the storyline of the visual novel.
-3. Sprite page: ![page](/assets/03.png)
+3. Sprite page: ![page](/assets/02.png)
 <br> This page will have images of all the sprites and their costumes used in the visual novel.
 
 ## CompSci Project Proposal 𐔌՞ ܸ.ˬ.ܸ՞𐦯
