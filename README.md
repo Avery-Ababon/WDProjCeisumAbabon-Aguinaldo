@@ -10,8 +10,8 @@ The HTML form will be used in a way that it will connect the user with the story
 <br> This page will be where the player inputs their information, such as their name, age, and gender. This information will be used to make the visual novel more interesting and engaging.
 2. Storyline / plot: ![page](/assets/03.png)
 <br> This page will have an summarization of the storyline of the visual novel.
-3. Sprite page: ![page](/assets/02.png)
-<br> This page will have images of all the sprites and their costumes used in the visual novel.
+3. Input page: ![page](/assets/04.png)
+<br> In this page, the user will be able to input their information to make the visual novel game more immersive and interactive. They will also input their name, which will be used whenever the character says the player's name. The favorite character dropdown will also make that specific character seem nicer to you, compared to other characters.
 
 ## CompSci Project Proposal 𐔌՞ ܸ.ˬ.ܸ՞𐦯
 <br>
