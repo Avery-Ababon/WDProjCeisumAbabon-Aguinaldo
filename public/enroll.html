@@ -22,7 +22,7 @@
 }
 
 .modal-content {
-  background-color: #fefefe;
+  background-color: rgb(255, 250, 252);
   margin: 5% auto 15% auto; 
   border: 1px solid #888;
   width: 80%; 
@@ -40,6 +40,15 @@
 hr {
   border: 1px solid #f1f1f1;
   margin-bottom: 25px;
+}
+
+.head {
+width: 80%;
+margin: 20px auto; 
+padding: 15px;  
+background-color: rgb(255, 250, 252); 
+border: 2px solid rgb(223, 210, 205);
+border-radius: 8px;
 }
 
 .close:hover,
@@ -68,12 +77,16 @@ button {
     display: block;  
     margin: 0 auto; 
 }
+
   </style>
 
 </head>
 
-    <h1>Enrollment for Student Exchange Program: </h1>
+<div class="head">
+  <h1>Enrollment for Student Exchange Program: </h1>
     <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
+</div>
+    
 
     <div id="id01" class="modal">
         <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -100,12 +113,14 @@ button {
                 </textarea>
               </label><br/><br/>
               <label> 
-                <input type="checkbox" name="dp" id="dp" value="true" /> 
+                <input type="checkbox" name="dp" id="dp" value="true" required/> 
                 Agree to Data Privacy Policy
               </label><br/><br/>
             <div class="clearfix">
                 <button type="button" onclick="location.href='./mainMenu.html'" class="cancelbtn">Cancel</button>
+                <br/>
                 <button type="button" onclick="location.href='./vn.html'" class="sgnupbtn">Sign up</button>
+                <br/><br/>
               </div>
             </div>
           </form>
