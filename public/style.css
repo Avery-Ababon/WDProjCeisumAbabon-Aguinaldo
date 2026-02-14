@@ -1,17 +1,92 @@
+.desktop{
+    width: 70%;
+    border: 10px solid;
+    border-radius: 50px;
+    background-image: url('../assets/wallpaper.png');
+    background-size:cover;
+    height: 90vh;
+    position: relative;
+    border-color: rgb(207, 207, 207);
+    margin: auto;
+    margin-top: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-size: 10px;
+    text-align: center;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.desktop2{
+    width: 70%;
+    border: 10px solid;
+    border-radius: 50px;
+    background-color: rgb(255, 247, 250);;
+    background-size:cover;
+    height: 90vh;
+    position: relative;
+    border-color: rgb(207, 207, 207);
+    margin: auto;
+    margin-top: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-size: 15px;
+    text-align: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 5px;
+}
+
+.creatorz{
+    width: 70%;
+    height: 20%;
+    margin: auto;
+    margin-top: 25px;
+    position: relative;
+}
+
+.thingy{
+  background: url('https://i.pinimg.com/736x/5a/d9/c0/5ad9c060b886bf8aba0eb634eef5240d.jpg');
+  background-size: 70%;
+  margin-top: 5px;
+  overflow-y: auto;
+  height: auto;
+  margin: auto;
+  width: 70%;
+  border-radius: 30px;
+  border-color: rgb(178, 157, 145);
+  border: solid 1px;
+  color:rgb(136, 103, 87);
+  padding: 20px;
+  padding-top: 60px;
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
 body{
-   margin: 0px;
-   font-size: 18px;
+   font-size: 15px;
    font-family:'Comic Sans MS', cursive, sans-serif;
-   color: rgb(112, 102, 98);
+   color: rgb(117, 97, 89);
    background-color: rgb(255, 246, 249);
    z-index: 0;
 }
 
-body.desktop {
-   height: 100vh;
-   width: 100vw;
-   background: url('../assets/ead.png') no-repeat center center / cover;
-   overflow: hidden;
+.keyboard{
+    position: relative;
+    width: 80%;
+    border: 10px solid;
+    border-radius: 50px;
+    margin: auto;
+    border-color: rgb(182, 182, 182);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.app{
+    width: 90px;
+    left: 48%;
+    top: 40%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
 }
 
 .center {
@@ -20,32 +95,7 @@ body.desktop {
    width: 85%;
 }
 
-.game-icon {
-   position: absolute;
-   bottom: 540px;
-   left: 750px;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   cursor: pointer;
-   color: white;
-   font-weight: bold;
-   text-shadow: 0 0 5px black;
-   z-index: 10;
-}
 
-.game-icon img {
-   width: 120px;
-   height: 120px;
-   margin-bottom: 10px;
-   border: 2px solid white;
-   border-radius: 10px;
-   transition: transform 0.2s ease;
-}
-
-.game-icon:hover img {
-   transform: scale(1.1);
-}
 
 .sidemenu{
    right: 0px;
@@ -55,7 +105,7 @@ body.desktop {
    border: solid rgb(164, 150, 143) 2px;
    width: 350px;
    text-align: center;
-   margin: 0px;
+
    filter: drop-shadow(0px 0px 1px white) drop-shadow(1px 1px 0px #0000004d);
 }
 
@@ -191,18 +241,6 @@ body.desktop {
 .char:hover{
    transform: scale(1.02);
    filter: drop-shadow(0px 0px 1px white) drop-shadow(3px 3px 3px #0000004d);
-}
-.thingy{
-   top: 57%;
-   left: 50%;
-   font-size: 25px;
-   transform: translate(-50%, -50%);
-   position: absolute;
-   width: 80%;
-   text-align: center;
-   height: 80%;
-
-
 }
 .deathnote{
    width: 70%;

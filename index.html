@@ -3,23 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paper Hearts Desktop</title>
+    <title>Paper Hearts</title>
 
     <link rel="stylesheet" href="./public/style.css">
     <link rel="icon" type="image/x-icon" href="./assets/logo.png">
+
+    <style>
+        body{
+            background: url('https://i.pinimg.com/736x/1c/9a/f1/1c9af1b7baa48d377eec2bbf5d1b65b7.jpg');
+            background-size: cover;
+        }
+    </style>
 </head>
 
-<body class="desktop">
-
-    <div class="game-icon" onclick="window.location.href='./mainMenu.html'">
-        <img src="./assets/logo.png" alt="Paper Hearts Game">
-        <span>Paper Hearts.exe</span>
+<body>
+    <div class="desktop">
+        <img src="./assets/logo.png" class="app" onclick="window.location.href='mainMenu.html'">
+        <span class="app">paperhearts.exe</span>
+        <img src="https://64.media.tumblr.com/47c2e22ae768ca6e86cdd00bc9f28aa5/5e504356cd5d39f9-6a/s250x400/452ec78d1671582d630b9854c17007ba136c6fba.pnj" class="app" onclick="window.location.href='./public/creators.html'">
+        <span class="app">creators</span>
     </div>
-
-    <div class="fanarts" onclick="window.location.href='./public/fanartfolder.html'">
-        <img src="./assets/folderpng.png" alt="Fanarts Folder">
-        <span>Fanarts and Sprites</span>
-    </div>
-
+    <div class="keyboard"></div>
 </body>
-</html>
