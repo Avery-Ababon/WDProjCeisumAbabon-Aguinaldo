@@ -1,4 +1,21 @@
-let playerName = "You";
+const lightSprite = document.getElementById("lightSprite");
+const misaSprite = document.getElementById("misaSprite");
+const orihimeSprite = document.getElementById("orihimeSprite");
+
+const sprites = { // list of sprites :)
+  Light: lightSprite,
+  Misa: misaSprite,
+  Orihime: orihimeSprite
+};
+
+function hideAllSprites() { // hides the spritez
+  Object.values(sprites).forEach(sprite => {
+    if (sprite) sprite.style.display = "none";
+  });
+  
+}
+
+let playerName = localStorage.getItem("playerName") || "You";
 let currentScene = "start";
 let index = 0;
 
@@ -10,7 +27,8 @@ const choiceBox = document.createElement("div");
 choiceBox.id = "choices";
 document.getElementById("tbox").appendChild(choiceBox);
 
-const script = {
+
+const script = { //the dialogue thingy
   start: [
     { speaker: "Narrator", text: "A new year begins." },
   { speaker: "Narrator", text: "Winter break has ended, and the classroom was filled with chatter." },
@@ -89,8 +107,7 @@ const script = {
     { speaker: "Narrator", text: "You step into the classroom." },
     { speaker: "Narrator", text: "There were no gasps or interruptions like before. The students simply stared." },
 
-    { speaker: "Player", text: "Good morning, everyone. I am..." },
-    { action: "askName" },
+    { speaker: "Player", text: "Good morning, everyone. I am " + playerName+ "."},
 
     { speaker: "Adviser", text: "Take any open seat." },
     
@@ -228,8 +245,15 @@ function showLine() {
   if (!line) {
     btn.disabled = true;
     nameBox.textContent = "";
-    textBox.textContent = "End of demo ✨";
+    textBox.textContent = "end :)";
+    hideAllSprites();
     return;
+  }
+
+  hideAllSprites();
+
+  if (sprites[line.speaker]) {
+    sprites[line.speaker].style.display = "block";
   }
 
   choiceBox.innerHTML = "";
@@ -245,16 +269,20 @@ function showLine() {
 
   if (line.choice) {
     btn.style.display = "none";
+
     line.options.forEach(opt => {
       const b = document.createElement("button");
       b.textContent = opt.text;
+
       b.onclick = () => {
         currentScene = opt.next;
         index = 0;
         showLine();
       };
+
       choiceBox.appendChild(b);
     });
+
     return;
   }
 
@@ -277,5 +305,4 @@ btn.addEventListener("click", () => {
   index++;
   showLine();
 });
-
 showLine();
